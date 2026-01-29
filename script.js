@@ -4,6 +4,7 @@ console.log("2.", 8*"4");
 console.log("3.", 8/"4");
 console.log("4.", 8-"4");
 
+
 console.log("---Oppgave3---") //oppgave 3
 let a = 3;
 let b = 7;
@@ -54,8 +55,8 @@ for(let i = 0; i <= 10; i++) {
 
 console.log("---Oppgave9---") //oppgave 9
 
-function tilfeldighilsen(){
-    let hilsen = Math.floor(Math.random()* 4)
+function tilfeldighilsen(max){
+    let hilsen = Math.floor(Math.random()* max)
     if(hilsen == 3){
         console.log("hei")
     }
@@ -66,5 +67,35 @@ function tilfeldighilsen(){
         console.log("God dag")
     }
 }
+tilfeldighilsen(4)
 
-tilfeldighilsen()
+console.log("---Oppgave10---") //oppgave 10
+
+function tilfeldignummer(){
+    let terning1 = Math.floor(Math.random()* 6) +1;
+    let terning2 = Math.floor(Math.random()* 6) +1;
+    console.log("Du rullet " + terning1 + " i terning 1");
+    console.log("Du rullet " + terning2 + " i terning 2");
+
+    if (terning1 == terning2) {
+        console.log("Du rullet et parr!")
+    }
+}
+tilfeldignummer()
+
+console.log("---Oppgave11---") //oppgave 11
+
+function katteting(mengde){
+    for( let i = mengde; i > 0; i--)
+    console.log("=^.^=");
+}
+
+katteting(67)
+
+console.log("---Oppgave12---") //oppgave 11
+
+function navneskilt(navn){
+    console.log("****** \n" + "*" + navn + "*" + "\n******")
+}
+navneskilt("Lise")
+
