@@ -219,7 +219,8 @@ console.log(array5)
 }
 
 function fjernfraarray(tall){
-    
+    array5.splice(0, tall)
 }
 
 lagarray(670)
+fjernfraarray(400)
