@@ -92,10 +92,134 @@ function katteting(mengde){
 
 katteting(67)
 
-console.log("---Oppgave12---") //oppgave 11
+console.log("---Oppgave12---") //oppgave 12
 
 function navneskilt(navn){
-    console.log("****** \n" + "*" + navn + "*" + "\n******")
+    let output = "";
+    for (let i = 0; i < navn.length + 4; i++) {
+        output += "*";
+    }
+    console.log(output + "\n" + "* " + navn + " *" + "\n" + output);
 }
-navneskilt("Lise")
+navneskilt("Lisa")
 
+console.log("---Oppgave13---") //oppgave 13
+
+let primtall = [1,2];
+
+function blimrall(){
+    for (let i = 3; i < 100; i++){
+        let erPrim = true;
+        for (let j = 2; j < i; j++) {
+            if (i%j == 0) {
+               erPrim = false;
+            }
+        }
+        if (erPrim) {
+            primtall.push(i)
+        }
+    
+    }
+    console.log(primtall);
+    
+
+}
+
+blimrall()
+
+console.log("---Oppgave14---") //oppgave 14
+
+array = [];
+let minste 
+let storste
+
+function hellay(mengde){
+    for (let i = 0; i < mengde; i++) {
+        let nummer = Math.floor(Math.random()*mengde) + 1;
+        array.push(nummer);
+    }
+    console.log(array);
+    array.sort((a, b) => b - a);
+    minste = Math.min(...array);
+    storste = Math.max(...array);
+    console.log(minste, storste);
+}
+
+hellay(50)
+
+console.log("---Oppgave15---") //oppgave 15
+
+let array2 = []
+
+function arbie(tall){
+for (let index = 0; index < tall; index++) {
+    array2.push(index)
+    if (index%2!==0){
+        array2.pop(index)
+    }
+}
+console.log(array2)
+}
+
+arbie(100)
+
+console.log("---Oppgave16---") //oppgave 16
+
+let array3 = [];
+
+for (let index = 0; index < 100; index++) {
+    array3.push(index)
+}
+
+function reverseArray(arr) {
+  const reversed = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reversed.push(arr[i]);
+  }
+  return reversed;
+}
+
+const original = array3;
+const reversed = reverseArray(original);
+console.log(reversed);
+
+console.log("---Oppgave17---") //oppgave 17
+
+
+function hasDuplicates(array) {
+  return new Set(array).size !== array.length;
+}
+
+let array4 = []
+
+function barbie(tall){
+for (let index = 0; index < tall; index++) {
+    let nummer = Math.floor(Math.random()*tall) + 1;
+    while (array4.includes(nummer)) {
+        nummer = Math.floor(Math.random()*tall) + 1;
+    }
+    array4.push(nummer);
+}
+console.log(array4)
+}
+
+barbie(500)
+console.log(hasDuplicates(array4))
+
+console.log("---Oppgave18---") //oppgave 18
+
+let array5 = []
+
+function lagarray(tall){
+    for (let index = 0; index < tall; index++) {
+    let nummer = Math.floor(Math.random()*tall) + 1;
+    array5.push(nummer);
+}
+console.log(array5)
+}
+
+function fjernfraarray(tall){
+    
+}
+
+lagarray(670)
