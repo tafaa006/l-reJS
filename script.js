@@ -224,3 +224,39 @@ function fjernfraarray(tall){
 
 lagarray(670)
 fjernfraarray(400)
+
+
+console.log("---Oppgave19---") //oppgave 19
+
+const spiller1Kort = []
+const spiller2Kort = []
+const kortTyper = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ,13]
+
+let MengeKort = 52
+let spillStart = false
+let p1 = true
+
+function TrekkKort(mengde){
+    for (let kort = 0; kort < mengde; kort++) {
+        let nesteKort = kortTyper[Math.floor(Math.random() * kortTyper.length)]
+        if (p1){
+            spiller1Kort.push(nesteKort);
+            console.log("spiller1 fikk kortet ", nesteKort);
+            p1 = false;
+        } 
+        else if (p1 == false){
+            spiller2Kort.push(nesteKort);
+            console.log("spiller2 fikk kortet ", nesteKort);
+            p1 = true;
+        }
+    }
+    console.log(spiller1Kort)
+    console.log(spiller2Kort)
+}
+
+function SpillKort(){
+    let kort1 = spiller1Kort[Math.floor(Math.random() * spiller1Kort.length)]
+    let kort2 = spiller2Kort[Math.floor(Math.random() * spiller2Kort.length)]
+}
+
+TrekkKort(MengeKort)
